@@ -11,9 +11,9 @@ pipeline {
                      sh 'mvn clean compile'
                  } 
                 }
-                 stage('Two') {
+                 stage('Test') {
                  steps {
-                    echo done
+                    sh 'mvn clean validate'
                  }
                  }
               }
