@@ -6,14 +6,14 @@ pipeline {
             checkout scm
         }
     }
-                 stage('One') {
+                 stage('Build') {
                  steps {
-                     echo 'Hi'
+                     sh 'mvn clean compile'
                  } 
                 }
                  stage('Two') {
                  steps {
-                    input('Do you want to proceed?')
+                    echo done
                  }
                  }
               }
