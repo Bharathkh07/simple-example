@@ -16,5 +16,10 @@ pipeline {
                     sh 'mvn clean validate'
                  }
                  }
+                  stage('Docker') {
+                           steps {
+                                    sh 'docker run '
+                           }
+                  }
               }
 }
