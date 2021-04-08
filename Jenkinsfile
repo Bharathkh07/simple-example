@@ -18,7 +18,7 @@ pipeline {
                  }
                   stage('Docker') {
                            steps {
-                                    sh 'docker run '
+                                    sh 'docker --version '
                            }
                   }
               }
